@@ -481,6 +481,50 @@ h2 {
   color: #59616d;
 }
 
+.past-section {
+  background: #ffffff;
+}
+
+.past-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.past-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  padding: 28px;
+  border: 1px solid rgba(32, 37, 45, 0.1);
+  border-radius: 8px;
+  background: #fbfaf7;
+}
+
+.past-label {
+  margin: 0 0 10px;
+  color: #8d6b28;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.past-card h3 {
+  margin: 0 0 12px;
+  color: #1d2733;
+  font-size: 22px;
+  line-height: 1.42;
+}
+
+.past-card p {
+  margin: 0;
+  color: #59616d;
+}
+
+.past-link {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
 .speaker {
   background: #ffffff;
 }
@@ -589,6 +633,7 @@ h2 {
   .value-grid,
   .detail-layout,
   .prepare-grid,
+  .past-grid,
   .speaker-layout {
     grid-template-columns: 1fr;
   }
@@ -647,6 +692,7 @@ h2 {
   .panel,
   .value-card,
   .prepare-card,
+  .past-card,
   .event-card {
     padding: 20px;
   }
@@ -868,6 +914,34 @@ h2 {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="past-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">PAST SESSIONS</p>
+          <h2>第1回・第2回の内容も確認できます。</h2>
+          <p>今回のClaude回につながる、AI活用実践セミナーの過去回LPです。</p>
+        </div>
+        <div class="past-grid">
+          <article class="past-card">
+            <p class="past-label">第1回</p>
+            <h3>AIを仕事の相棒にする入口</h3>
+            <p>AIの基本、得意・苦手、コンテキスト設計の考え方を扱った初回です。</p>
+            <div class="past-link">
+              <a class="button button-dark" href="https://tomoaki-ag-works.github.io/ai-seminar-lp/" target="_blank" rel="noopener">第1回LPを見る</a>
+            </div>
+          </article>
+          <article class="past-card">
+            <p class="past-label">第2回</p>
+            <h3>喋るAIから、働くAIへ</h3>
+            <p>ブラウザAIと開発環境AIの違い、仕事を任せるAIへの流れを扱った回です。</p>
+            <div class="past-link">
+              <a class="button button-dark" href="https://tomoaki-ag-works.github.io/ai-seminar-lp-2/" target="_blank" rel="noopener">第2回LPを見る</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
