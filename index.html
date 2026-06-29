@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI活用実践セミナー 第3回 | 第3のAI「Claude」を知ろう</title>
-<meta name="description" content="八戸市倫理法人会主催 AI活用実践セミナー第3回。2026年6月25日(木) 18:30-19:30、YSアリーナ会議室にて開催。Claudeを使い、無料プランでOfficeファイルを作る実践ワークを行います。">
+<title>AI活用実践セミナー 第3回 録画・開催報告 | 第3のAI「Claude」を知ろう</title>
+<meta name="description" content="八戸市倫理法人会主催 AI活用実践セミナー第3回（2026年6月25日開催）の録画・開催レポート。Claudeの特徴、ChatGPT・Geminiとの使い分け、同じプロンプトで請求書Excelを作らせる実践ワークを扱いました。">
 <style>
 *, *::before, *::after {
   box-sizing: border-box;
@@ -96,6 +96,7 @@ a {
 
 .hero-copy {
   max-width: 760px;
+  overflow-wrap: anywhere;
 }
 
 .eyebrow {
@@ -113,11 +114,25 @@ h1 {
   font-weight: 800;
 }
 
+h1,
+h2,
+h3,
+p,
+.button,
+.meta-value,
+.detail-value {
+  overflow-wrap: anywhere;
+}
+
 .hero-lead {
   max-width: 690px;
   margin: 24px 0 0;
   color: rgba(255, 255, 255, 0.88);
   font-size: 18px;
+}
+
+.mobile-break {
+  display: none;
 }
 
 .hero-actions,
@@ -169,6 +184,37 @@ h1 {
   background: #ffffff;
   color: #20252d;
   border-color: rgba(32, 37, 45, 0.16);
+}
+
+.video-section {
+  background: #ffffff;
+}
+
+.video-frame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #12161d;
+  box-shadow: 0 22px 54px rgba(31, 35, 43, 0.15);
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-caption {
+  margin: 14px 0 0;
+  color: #6b7280;
+  text-align: center;
+  font-size: 14px;
+}
+
+.video-caption a {
+  color: #8d6b28;
+  font-weight: 800;
 }
 
 .hero-meta {
@@ -623,6 +669,7 @@ h2 {
 
   .hero-lead {
     font-size: 16px;
+    max-width: 100%;
   }
 
   .hero-meta,
@@ -671,7 +718,8 @@ h2 {
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 30px;
+    line-height: 1.25;
   }
 
   h2 {
@@ -685,6 +733,15 @@ h2 {
 
   .button {
     width: 100%;
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .mobile-break {
+    display: block;
   }
 
   .meta-item,
@@ -705,18 +762,18 @@ h2 {
       <div class="container">
         <div class="hero-top">
           <div class="brand">八戸市倫理法人会 主催 / AI活用実践セミナー</div>
-          <div class="status-pill">第3回 参加受付中</div>
+          <div class="status-pill">録画公開中</div>
         </div>
 
         <div class="hero-copy">
-          <p class="eyebrow">第3のAI「Claude」を知ろう</p>
-          <h1>プロが選ぶAIを、<br>先に触っておく。</h1>
+          <p class="eyebrow">第3回 開催レポート</p>
+          <h1>第3のAI<br>「Claude」を、<br>仕事の選択肢に。</h1>
           <p class="hero-lead">
-            2026年6月25日(木) 18:30、YSアリーナ会議室にて開催。ChatGPT、Geminiの次に知っておきたいAI「Claude」を学び、無料プランでOfficeファイルを作って持ち帰る実践回です。
+            2026年6月25日(木)、<br class="mobile-break">YSアリーナ会議室にて<br class="mobile-break">第3回セミナーを開催しました。ChatGPT、Geminiの次に知っておきたいAI「Claude」を扱い、同じ依頼文で請求書Excelを作らせる実践ワークまで行いました。当日の録画も公開しています。
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://forms.gle/oU6vKyzMtwngUuK98" target="_blank" rel="noopener">参加を申し込む</a>
-            <a class="button button-secondary" href="#program">内容を見る</a>
+            <a class="button button-primary" href="https://www.youtube.com/watch?v=t-9dfd94F0Y" target="_blank" rel="noopener">録画を見る</a>
+            <a class="button button-secondary" href="#materials">持ち帰り資料を見る</a>
           </div>
         </div>
 
@@ -734,8 +791,8 @@ h2 {
             <span class="meta-value">中小企業経営者<br>個人事業主</span>
           </div>
           <div class="meta-item">
-            <span class="meta-label">持ち物</span>
-            <span class="meta-value">PC推奨<br>スマホ可</span>
+            <span class="meta-label">内容</span>
+            <span class="meta-value">Claude特集<br>請求書Excelワーク</span>
           </div>
         </div>
       </div>
@@ -743,14 +800,28 @@ h2 {
   </header>
 
   <main>
+    <section class="video-section" id="video">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">FULL RECORDING</p>
+          <h2>当日の録画を公開しました。</h2>
+          <p>Claudeの考え方、3大AIの比較、請求書Excel生成ワークまで、当日の流れを録画で確認できます。</p>
+        </div>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/t-9dfd94F0Y" title="AI活用実践セミナー 第3回（録画）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">再生できない場合は <a href="https://www.youtube.com/watch?v=t-9dfd94F0Y" target="_blank" rel="noopener">YouTube で直接視聴</a> してください。</p>
+      </div>
+    </section>
+
     <section class="intro">
       <div class="container">
         <div class="statement">
           <div class="statement-copy">
             <p class="section-kicker">WHY CLAUDE</p>
-            <h2>Claudeは、ただの「第3のAI」ではありません。</h2>
+            <h2>Claudeは、ただの「第3のAI」ではありませんでした。</h2>
             <p>
-              文章、資料、長い文脈、ファイルを扱う仕事で、世界の開発者や企業が選んでいるAIです。知名度だけで選ぶ時代から、仕事の種類でAIを使い分ける時代へ。今回のテーマは、その入口です。
+              文章、資料、長い文脈、ファイルを扱う仕事で、世界の開発者や企業が選んでいるAIです。知名度だけで選ぶ時代から、仕事の種類でAIを使い分ける時代へ。第3回では、その入口を体験してもらいました。
             </p>
           </div>
           <div class="quote-panel">
@@ -764,21 +835,21 @@ h2 {
       <div class="container">
         <div class="section-head">
           <p class="section-kicker">THIS SESSION</p>
-          <h2>第3回で持ち帰るもの</h2>
-          <p>知識だけでは終わりません。会場でClaudeを使い、手元に残るファイルを作ります。</p>
+          <h2>第3回で持ち帰ったもの</h2>
+          <p>知識だけで終わらせず、会場で3つのAIに同じ依頼を出し、手元に残るExcelファイルを作りました。</p>
         </div>
         <div class="proof-grid">
           <div class="proof">
-            <span class="proof-number">1つ</span>
-            <p>今日触るAIはClaudeだけ。ツールを増やさず、集中して覚えます。</p>
+            <span class="proof-number">Claude</span>
+            <p>Claudeを軸に、ChatGPT・Geminiとの違いを「同じ仕事を頼んだ時の出力差」で整理しました。</p>
           </div>
           <div class="proof">
-            <span class="proof-number">5枚以内</span>
-            <p>自社紹介、商品説明、朝礼資料などのOfficeファイルを作ります。</p>
+            <span class="proof-number">Excel</span>
+            <p>日本の消費税計算、計算式、見やすいデザインまで含めた請求書Excelを、その場で作るワークを行いました。</p>
           </div>
           <div class="proof">
-            <span class="proof-number">無料</span>
-            <p>参加者ワークはClaude.aiの無料プラン範囲で進めます。</p>
+            <span class="proof-number">同一</span>
+            <p>Claude、ChatGPT、Geminiに同じプロンプトを投げ、出力の得意・不得意を比べました。</p>
           </div>
         </div>
       </div>
@@ -787,22 +858,22 @@ h2 {
     <section class="dark-band">
       <div class="container">
         <div class="section-head">
-          <p class="section-kicker">PROBLEM FRAMING</p>
-          <h2>AIを使っているのに、仕事が変わらない理由。</h2>
-          <p>便利な返答で止まっているだけでは、業務は軽くなりません。次の段階は、AIにファイル単位で仕事を渡すことです。</p>
+          <p class="section-kicker">WHAT WE COVERED</p>
+          <h2>当日扱ったテーマ</h2>
+          <p>便利な返答で止まっているだけでは、業務は軽くなりません。第3回では、AIに実務ファイルを作らせ、品質の差を見る入口を扱いました。</p>
         </div>
         <div class="problem-grid">
           <div class="panel">
-            <h3>相談だけで終わる</h3>
-            <p>文章は返ってくる。でも、会議資料や説明資料として使うには、結局人間が作り直している。</p>
+            <h3>Claudeの出自</h3>
+            <p>Anthropicという会社の成り立ち、安全性を重視する思想、Claudeの慎重さ・誠実さの特徴を整理しました。</p>
           </div>
           <div class="panel">
-            <h3>資料が散らばる</h3>
-            <p>PDF、Word、Excel、PowerPoint。形式が違うだけで、情報整理に時間を取られている。</p>
+            <h3>3大AIの使い分け</h3>
+            <p>ChatGPT、Gemini、Claudeを優劣ではなく個性で比較し、同じ依頼でも出力が変わることを確認しました。</p>
           </div>
           <div class="panel">
-            <h3>使い分けが曖昧</h3>
-            <p>ChatGPT、Gemini、Claude。どれが優秀かではなく、何を任せるかで選ぶ視点が必要です。</p>
+            <h3>請求書Excelを作る</h3>
+            <p>消費税計算、計算式、デザインを含めた請求書Excel生成を通じて、AIに「返事」ではなく「成果物」を作らせる体験をしてもらいました。</p>
           </div>
         </div>
       </div>
@@ -813,7 +884,7 @@ h2 {
         <div class="section-head">
           <p class="section-kicker">PROGRAM</p>
           <h2>当日の流れ</h2>
-          <p>前半でClaudeの世界観を見て、後半で実際にOfficeファイルを作ります。</p>
+          <p>前半でClaudeの世界観を見て、後半で実際に請求書Excelを作りました。</p>
         </div>
         <div class="program-layout">
           <figure class="visual">
@@ -823,31 +894,37 @@ h2 {
             <div class="program-item">
               <div>
                 <h3>オープニング</h3>
-                <p>第2回のおさらい。「喋るAI」から「働くAI」への流れを確認します。</p>
+                <p>第2回のおさらい。「喋るAI」から「働くAI」への流れを確認しました。</p>
               </div>
             </div>
             <div class="program-item">
               <div>
                 <h3>Claudeとは何者か</h3>
-                <p>Anthropicの出自、安全性の思想、ChatGPT・Geminiとの違いを整理します。</p>
+                <p>Anthropicの出自、安全性の思想、ChatGPT・Geminiとの違いを整理しました。</p>
               </div>
             </div>
             <div class="program-item">
               <div>
                 <h3>Claudeの世界観デモ</h3>
-                <p>企業利用、ファイル処理、エージェント時代の入口を講師画面で見ます。</p>
+                <p>企業利用、ファイル処理、エージェント時代の入口を講師画面で確認しました。</p>
               </div>
             </div>
             <div class="program-item">
               <div>
-                <h3>Officeソフト生成ワーク</h3>
-                <p>無料Claude.aiで、自社用のOfficeファイルをゼロから作ります。</p>
+                <h3>請求書Excel生成ワーク</h3>
+                <p>同じ依頼文をClaude、ChatGPT、Geminiに投げ、日本の税率・計算式・見た目を含む請求書Excelの出力差を比較しました。</p>
+              </div>
+            </div>
+            <div class="program-item">
+              <div>
+                <h3>当日の共通プロンプト</h3>
+                <p>「一般的な書式で、エクセルで請求書を作って欲しい。日本の税率で消費税計算もさせて。デザインも見やすくてイケてる感じで。計算式も埋め込んでね。」</p>
               </div>
             </div>
             <div class="program-item">
               <div>
                 <h3>まとめ・質疑応答</h3>
-                <p>Claudeの使いどころ、AIエージェント編へのつながりを整理します。</p>
+                <p>Claudeの使いどころ、AIエージェント編へのつながりを整理しました。</p>
               </div>
             </div>
           </div>
@@ -855,7 +932,7 @@ h2 {
       </div>
     </section>
 
-    <section class="detail-section">
+    <section class="detail-section" id="materials">
       <div class="container">
         <div class="detail-layout">
           <div class="event-card">
@@ -891,26 +968,35 @@ h2 {
 
           <div>
             <div class="section-head" style="text-align:left;margin:0 0 24px;">
-              <p class="section-kicker">PREPARATION</p>
-              <h2>事前に準備しておくと、当日スムーズです。</h2>
-              <p>会場での登録時間を減らすため、可能な方は事前にClaude.aiの無料アカウント登録を済ませてきてください。</p>
+              <p class="section-kicker">MATERIALS</p>
+              <h2>持ち帰り資料</h2>
+              <p>第3回の基本資料、当日スライド、ワーク用配布資料をまとめています。</p>
             </div>
             <div class="prepare-grid">
               <div class="prepare-card">
-                <h3>Claude.aiに登録</h3>
-                <p>メールアドレスで無料アカウントを作成できます。当日はログインできる状態にしておくと安心です。</p>
+                <h3>基本資料</h3>
+                <p>第1回・第2回・第3回のLPと持ち帰り資料へアクセスするためのQRをまとめた資料です。</p>
+                <div class="past-link">
+                  <a class="button button-dark" href="handout/AI活用実践セミナー%20第3回.pdf" target="_blank" rel="noopener">PDFを見る</a>
+                </div>
               </div>
               <div class="prepare-card">
-                <h3>PC持参がおすすめ</h3>
-                <p>スマホでも参加できますが、Officeファイルの確認や保存はPCの方が進めやすいです。</p>
+                <h3>当日スライド</h3>
+                <p>Claudeの出自、3大AI比較、請求書Excel生成ワーク、第4回への橋渡しを扱ったスライドです。</p>
+                <div class="past-link">
+                  <a class="button button-dark" href="handout/第３回AI勉強会スライド.pdf" target="_blank" rel="noopener">スライドを見る</a>
+                </div>
               </div>
               <div class="prepare-card">
-                <h3>作りたい資料を決める</h3>
-                <p>会社紹介、商品説明、採用説明、朝礼資料など、当日作りたい資料を1つ考えてきてください。</p>
+                <h3>ワーク用配布資料</h3>
+                <p>請求書Excelを作るための共通依頼文や、復習用の要点を確認できます。</p>
+                <div class="past-link">
+                  <a class="button button-dark" href="handout/第３回_配布資料.pdf" target="_blank" rel="noopener">配布資料を見る</a>
+                </div>
               </div>
               <div class="prepare-card">
-                <h3>生成は1回で完結</h3>
-                <p>無料プランの上限を避けるため、当日はまず1本作ることを優先します。作り込みは持ち帰って行えます。</p>
+                <h3>第4回への入口</h3>
+                <p>今回作った請求書Excelは、AIにファイル単位で仕事を渡す入口です。次はエージェント時代の仕事の任せ方へ進みます。</p>
               </div>
             </div>
           </div>
@@ -923,7 +1009,7 @@ h2 {
         <div class="section-head">
           <p class="section-kicker">PAST SESSIONS</p>
           <h2>第1回・第2回の内容も確認できます。</h2>
-          <p>今回のClaude回につながる、AI活用実践セミナーの過去回LPです。</p>
+          <p>今回のClaude回につながる、AI活用実践セミナーの過去回LPです。基礎から順に見直せます。</p>
         </div>
         <div class="past-grid">
           <article class="past-card">
@@ -968,14 +1054,14 @@ h2 {
     <section class="cta" id="entry">
       <div class="container">
         <div class="cta-box">
-          <p class="section-kicker">ENTRY</p>
-          <h2>Claudeを、仕事の選択肢に入れる。</h2>
+          <p class="section-kicker">NEXT SESSION</p>
+          <h2>次は、エージェント時代へ。</h2>
           <p>
-            まずは1時間。難しい専門用語ではなく、実際に触って「ここまでできる」を持ち帰る回です。
+            第3回では、Claudeを知り、請求書Excelという成果物を作りました。録画と資料で復習しながら、第4回からはAIが道具を使って仕事を進める「エージェント」の世界へ進みます。
           </p>
           <div class="cta-actions">
-            <a class="button button-primary" href="https://forms.gle/oU6vKyzMtwngUuK98" target="_blank" rel="noopener">参加を申し込む</a>
-            <a class="button button-secondary" href="#program">内容をもう一度見る</a>
+            <a class="button button-primary" href="https://www.youtube.com/watch?v=t-9dfd94F0Y" target="_blank" rel="noopener">第3回 録画を見る</a>
+            <a class="button button-secondary" href="#materials">持ち帰り資料を見る</a>
           </div>
         </div>
       </div>
@@ -983,7 +1069,7 @@ h2 {
   </main>
 
   <footer class="footer">
-    &copy; 2026 八戸市倫理法人会 ｜ AI活用実践セミナー 第3回
+    &copy; 2026 八戸市倫理法人会 ｜ AI活用実践セミナー 第3回 録画・開催レポート
   </footer>
 </body>
 </html>
