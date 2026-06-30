@@ -94,6 +94,48 @@ a {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.series-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #14171d;
+  color: #ffffff;
+}
+
+.series-nav-label {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.series-nav a,
+.series-nav .current {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.series-nav a:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.series-nav .current {
+  color: #18140c;
+  background: #f5dfae;
+}
+
 .hero-copy {
   max-width: 760px;
   overflow-wrap: anywhere;
@@ -659,6 +701,20 @@ h2 {
     margin-bottom: 58px;
   }
 
+  .series-nav {
+    align-items: stretch;
+  }
+
+  .series-nav-label {
+    width: 100%;
+  }
+
+  .series-nav a,
+  .series-nav .current {
+    justify-content: center;
+    flex: 1 1 100%;
+  }
+
   h1 {
     font-size: 38px;
   }
@@ -757,6 +813,12 @@ h2 {
 </style>
 </head>
 <body>
+  <nav class="series-nav" aria-label="AI活用実践セミナー各回リンク">
+    <span class="series-nav-label">AI活用実践セミナー</span>
+    <a href="https://tomoaki-ag-works.github.io/ai-seminar-lp/">第1回 基礎知識編</a>
+    <a href="https://tomoaki-ag-works.github.io/ai-seminar-lp-2/">第2回 業務活用編</a>
+    <span class="current">第3回 Claude特集</span>
+  </nav>
   <header class="hero">
     <div class="hero-inner">
       <div class="container">
